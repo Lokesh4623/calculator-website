@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>calci</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/cal2.css') }}">
+    </head>
+    <body>
+        <h1>CALCULATOR</h1>
+        <form name="check" action="{{ url_for('predict')}}" method="post">
+            ENTER EXPRESSION:<br><input id="b" type="text" name="exp" size="20"><br>
+            <center>RESULT:<div id="abc" name="res">{{result_text}}<div><br></center>
+            <input class="but" type="button" value="1" OnClick="check.exp.value+='1'"> 
+            <input class="but" type="button" value="2" OnClick="check.exp.value+='2'"> 
+            <input class="but" type="button" value="3" OnClick="check.exp.value+='3'"> 
+            <input class="but" type="button" value="+" OnClick="check.exp.value+='+'"> 
+            <br>
+            
+            <input class="but" type="button" value="4" OnClick="check.exp.value+='4'"> 
+            <input class="but" type="button" value="5" OnClick="check.exp.value+='5'"> 
+            <input class="but" type="button" value="6" OnClick="check.exp.value+='6'"> 
+            <input class="but" type="button" value="-" OnClick="check.exp.value+='-'">
+            <br>
+            
+            <input class="but" type="button" value="7" OnClick="check.exp.value+='7'"> 
+            <input class="but" type="button" value="8" OnClick="check.exp.value+='8'"> 
+            <input class="but" type="button" value="9" OnClick="check.exp.value+='9'"> 
+            <input class="but" type="button" value="*" OnClick="check.exp.value+='*'">
+            <br>
+            
+             <button id="sub" type="submit"  class="but">=</button>
+            <input class="but" type="button" value="0" OnClick="check.exp.value+='0'">  
+            <input class="but" type="button" value="/" OnClick="check.exp.value+='/'">
+            <br>
+    
+            <input id="sub" type="reset" value="Clear" OnClick="check.exp.value=''"> 
+            <input class="but" type="button" value="(" onclick="check.exp.value+='('">
+            <input class="but" type="button" value=")" onclick="check.exp.value+=')'"> 
+        </form>
+        <br>
+        <br>
+       
+   </body>
+</html>
